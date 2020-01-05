@@ -1,0 +1,43 @@
+<!--<h2>Employee Details</h2><hr/>
+<div *ngIf="employee">
+  <div>
+    <label><b>First Name: </b></label> {{employee.firstName}}
+  </div>
+  <div>
+    <label><b>Last Name: </b></label> {{employee.lastName}}
+  </div>
+  <div>
+    <label><b>Email Id: </b></label> {{employee.emailId}}
+  </div>  
+</div>-->
+<table class="table table-bordered" *ngIf="employee" style="width: 65%; margin-left: 188px;">
+  <tr style="background-color: darkcyan ; text-align: center;">
+    <th>User</th>
+    <th>Details</th>    
+  </tr>
+  <tr>
+    <th>Name</th>
+    <td>{{employee.firstName}} {{employee.lastName}}</td>    
+  </tr>
+  <tr>
+    <th>Email Id</th>
+    <td>{{employee.email}}</td>    
+  </tr>
+  <tr>
+    <th>password</th>
+    <td>{{employee.password}}</td>    
+  </tr>
+  <tr>
+    <th>Genter</th>
+    <td>{{employee.gender}}</td>    
+  </tr>
+  <tr>
+    <th>Date Of Birth</th>
+    <td>{{employee.date}}</td>    
+  </tr>
+</table>
+<!--<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Employee List</button><br>-->
+
+

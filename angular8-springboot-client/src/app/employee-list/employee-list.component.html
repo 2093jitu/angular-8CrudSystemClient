@@ -1,0 +1,48 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">    
+    <h2 align="center">All User List</h2>
+  </div>
+  <hr><br>
+  <div class="panel-body">
+    <div class="row">
+      <div id="custom-search-input">
+                       <div class="input-group col-md-12" style="text-align: center">
+                           <input type="text" class="form-control" placeholder="Search With Email Address"  name="email" [(ngModel)]="name"/>
+                           <span class="input-group-btn">
+                               <button class="btn btn-danger" type="button" (click)="searchByEmail(name)" class="btn btn-primary" style="margin-left: 10px;">Search                                <i class="fa fa-search"></i> 
+                               </button>
+            </span>                                        
+      </div>
+  </div>
+</div>  
+    <table class="table table-bordered">
+      <thead style="background-color:darkcyan;">
+        <tr style="text-align: center;">
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Date Of Birth</th>
+          <th>Gender</th>
+          <th>Delete</th>
+          <th>Update</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees | async">
+          <td>{{employee.firstName}}</td>
+          <td>{{employee.lastName}}</td>          
+          <td>{{employee.email}}</td>
+          <td>{{employee.password}}</td>
+          <td>{{employee.date}}</td>          
+          <td>{{employee.gender}}</td>
+          <td><button (click)="deleteEmployee(employee.id)" class="btn btn-danger">Delete <i class="fa fa-trash-o"></i></button></td>
+          <td><button (click)="updateEmployee(employee.id)" class="btn btn-primary" style="margin-left: 10px">Update <i class="fa fa-edit"></i></button></td>             
+          <!--<button (click)="employeeDetails(employee.id)" class="btn btn-info" style="margin-left: 10px">Details</button>-->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="margin-bottom: 200px;"></div>
+</div>
+

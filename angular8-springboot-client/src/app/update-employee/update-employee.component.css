@@ -1,0 +1,16 @@
+.ng-valid[required],.ng-valid.required{
+    border: 3px solid green;
+}
+.ng-valid:not(form){
+
+    border: 2px solid red;
+
+}
+.btn-primary:disabled {
+    color: #fff;
+    background-color: red;
+    border-color:red;
+}
+.form-control{
+    border-bottom: 2px solid red;
+}
