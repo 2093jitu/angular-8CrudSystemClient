@@ -28,13 +28,11 @@ export class CreateEmployeeComponent implements OnInit {
   save() {
     
       this.employeeService.createEmployee(this.employee)
-      .subscribe(data =>data==null?this.message="This email is allraddy use......Please enter unique email" : this.gotoList(), error => console.log(error));      
-      //this.employee = new Employee();
-      //this.gotoList();
+      .subscribe(data =>data==null?this.message="This email is allraddy use......Please enter unique email" : this.gotoList(), error => console.log(error));     
+      
   }
 
-  onSubmit() {
-    //this.submitted = true;
+  onSubmit() {  
     this.save();    
   }
 

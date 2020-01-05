@@ -47,9 +47,7 @@ export class EmployeeListComponent implements OnInit {
   }
 
   public searchByEmail(name:string){
-    console.log(name);
-    //let resp= this.service.getById(name); 
-    //resp.subscribe((data)=>this.users=data);
+        console.log(name);    
     this.router.navigate(['search', name]);
  
    }
